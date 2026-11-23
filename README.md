@@ -42,3 +42,10 @@ Incluye una aplicación de escritorio en Java Swing conectada a PostgreSQL que o
 ## Alcance del repositorio público
 
 Se comparten el código fuente de la aplicación y los scripts SQL correspondientes a **Base de Datos I**. No se incluyen hojas de cálculo de datos originales, documentos administrativos ni archivos compilados, para evitar divulgar información potencialmente personal o innecesaria. Las credenciales de conexión se configuran localmente y no deben publicarse en GitHub.
+
+## Notas de publicación y verificación
+
+- Para esta versión pública se reemplazó el fondo fotográfico local de la ventana principal por un degradado dibujado con Java Swing; así no depende de una imagen adicional.
+- Se retiró la contraseña incrustada en el código original. Se requiere definir `BD1_DB_PASSWORD` antes de iniciar la aplicación.
+- La vista `vw_ventas_por_agricultor` en `sql/vistas.sql` utiliza `dv.subtotal`, pero esa columna no está definida en `DetalleVenta` dentro del script de tablas. Esa vista debe revisarse antes de ejecutarla.
+- El proyecto se comparte para documentación académica y no ha sido sometido a una prueba integral de ejecución con PostgreSQL en este entorno.
